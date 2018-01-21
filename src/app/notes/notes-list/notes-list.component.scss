@@ -1,0 +1,31 @@
+.btn-background{
+  background-color: cornsilk;
+  margin: 0 0 .5em 3em;
+}
+
+.notes {
+  display: flex;
+  flex-direction: row;
+
+  .items {
+    min-width: 25em;
+
+    li {
+      list-style: none;
+    }
+
+    .date {
+      font-size: small;
+      color: grey;
+    }
+
+    .active {
+      background-color: #c8a2c8;
+    }
+  }
+
+  .note {
+    padding-left: 1em;
+    background-color: #fff;
+  }
+}

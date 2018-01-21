@@ -1,21 +1,25 @@
-<div class="container">
-  <div class="list list-group">
-    <ul class="items">
-      <li *ngFor="let note of notes$ | async" [class.selected]="note.id === selectedId" class="list-group-item">
-        <a [routerLink]="['/notes', note.id]">
-          <div class="badge">
-            {{ note.title }}
-            <br/>
-          </div>
-           {{ note.date | date:'dd MMM yyyy' }}
-        </a>
-      </li>
-    </ul>
-  </div>
+<div class="container-fluid notes-list">
+  <button class="btn btn-outline-dark btn-background" (click)="addNote()">Add Note</button>
 
-  <div class="note">
-    <router-outlet></router-outlet>
+  <div class="notes">
+    <div class="list-group">
+      <ul class="items">
+        <li *ngFor="let note of notes$ | async">
+          <a (click)="select(note)"
+             [routerLink]="['/notes', note.id]"
+             [class.active]="note.id === selectedId"
+             class="list-group-item list-group-item-action">
+            <div class="">
+              {{ note.title }}<br/>
+              <span class="date">{{ note.date | date:'dd MMM yyyy' }}</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="note">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
-
-<button (click)="addNote()">Add Note</button>
