@@ -1,14 +1,14 @@
 <div class="container-fluid notes-list">
-  <button class="btn btn-outline-dark btn-background" (click)="addNote()">Add Note</button>
 
   <div class="notes">
     <div class="list-group">
+      <button class="btn btn-outline-dark btn-background" (click)="addNote()">Add Note</button>
       <ul class="items">
         <li *ngFor="let note of notes$ | async">
           <a (click)="select(note)"
              [routerLink]="['/notes', note.id]"
              [class.active]="note.id === selectedId"
-             class="list-group-item list-group-item-action">
+             class="list-group-item list-group-item-secondary list-group-item-action">
             <div class="">
               {{ note.title }}<br/>
               <span class="date">{{ note.date | date:'dd MMM yyyy' }}</span>

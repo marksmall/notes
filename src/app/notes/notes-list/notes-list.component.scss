@@ -1,18 +1,29 @@
-.btn-background{
+.btn-background {
   background-color: cornsilk;
-  margin: 0 0 .5em 3em;
+  max-width: 10em;
+  margin: .3em;
+}
+
+.btn-background:hover {
+  color: #000;
+  font-weight: bolder;
 }
 
 .notes {
   display: flex;
   flex-direction: row;
 
-  .items {
-    min-width: 25em;
+  .list-group {
+    background: #f2f2f2;
+    padding-top: .5em;
+    padding-bottom: 0;
+  }
 
-    li {
-      list-style: none;
-    }
+  .items {
+    min-width: 20em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
     .date {
       font-size: small;
