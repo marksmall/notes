@@ -16,7 +16,7 @@
   </div>
 
   <ng-template #display>
-    <div class="col-sm-6"> <!-- SET MIN WIDTH NEW NTES ARE TRUNCATED IN DISPLAY VIEW -->
+    <div class="col-sm-6 summary">
       <div *ngIf="note">
         <label class="date">Last edited: {{ note.date | date:'dd MMM yyyy \'at\' hh:mm' }}</label>
       </div>
