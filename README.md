@@ -6,6 +6,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The skeleton for this application was built using `ng new notes --style=scss`
 
+## Setup/Run
+
+Once cloned, run `yarn install`, this will install all dependencies, then to start the application,
+run `yarn start`.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
