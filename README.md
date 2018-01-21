@@ -11,26 +11,11 @@ The skeleton for this application was built using `ng new notes --style=scss`
 Once cloned, run `yarn install`, this will install all dependencies, then to start the application,
 run `yarn start`.
 
-## Development server
+## Further Improvements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This app could be improved by adding validation to the **Notes Detail** form to improve user feedback
+as to when you can save the form, at the moment, you can save with no content.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The structure of the form model could be improved, rather than have individual properties for what's 
+being edited, we could clone the original Note, if editing and overwrite values from it if we implement
+the **reset** functionality.
