@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="list list-group">
+    <ul class="items">
+      <li *ngFor="let note of notes$ | async" [class.selected]="note.id === selectedId" class="list-group-item">
+        <a [routerLink]="['/notes', note.id]">
+          <div class="badge">
+            {{ note.title }}
+            <br/>
+          </div>
+           {{ note.date | date:'dd MMM yyyy' }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<button (click)="addNote()">Add Note</button>

@@ -1,0 +1,20 @@
+<div>
+  <div *ngIf="note">
+    <label>Date: </label>{{ note.date | date:'dd MMM yyyy \'at\' hh:mm' }}
+  </div>
+
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="editTitle" placeholder="Title" />
+  </div>
+
+  <div>
+    <label>Content: </label>
+    <input [(ngModel)]="editContent" placeholder="Content" />
+  </div>
+  <p>
+    <button *ngIf="!editNote" (click)="edit()">Edit</button>
+    <button *ngIf="editNote" (click)="save()">Save</button>
+    <button *ngIf="editNote" (click)="cancel()">Cancel</button>
+  </p>
+</div>
