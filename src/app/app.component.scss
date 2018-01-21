@@ -1,23 +1,28 @@
-nav a {
-  padding: .5em 1em;
-  text-decoration: none;
-  margin-left: 1em;
-  margin-bottom: 1em;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: .3em;
-}
+nav {
+  a {
+    display: inline-block;
+    padding: .5em 1em;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    background-color: #eee;
+    border-radius: .3em;
 
-nav a:visited,
-a:link {
-  color: #607D8B;
-}
+    &:visited {
+      color: #607d8b;
+    }
 
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
+    &:link {
+      color: #607d8b;
+    }
 
-nav a.active {
-  color: #039be5;
+    &:hover {
+      color: #039be5;
+      background-color: #cfd8dc;
+    }
+
+    &.active {
+      color: #039be5;
+    }
+  }
 }

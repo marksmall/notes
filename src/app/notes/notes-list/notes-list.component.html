@@ -9,7 +9,7 @@
              [routerLink]="['/notes', note.id]"
              [class.active]="note.id === selectedId"
              class="list-group-item list-group-item-secondary list-group-item-action">
-            <div class="">
+            <div>
               {{ note.title }}<br/>
               <span class="date">{{ note.date | date:'dd MMM yyyy' }}</span>
             </div>
