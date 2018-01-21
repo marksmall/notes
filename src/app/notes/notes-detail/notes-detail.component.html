@@ -1,22 +1,22 @@
 <div class="container-fluid">
   <div class="form-group mb-2" *ngIf="editNote;else display">
     <div>
-      <label>Title: </label>
+      <label><strong>Title:</strong></label>
       <input class="form-control" [(ngModel)]="editTitle" placeholder="Title" />
     </div>
 
     <div>
-      <label>Content: </label>
+      <label><Strong>Content:</Strong></label>
       <textarea class="form-control" rows="10" cols="100" [(ngModel)]="editContent" placeholder="Content"></textarea>
     </div>
-    <p>
-      <button *ngIf="editNote" (click)="save()">Save</button>
-      <button *ngIf="editNote" (click)="cancel()">Cancel</button>
+    <p class="buttons">
+      <button class="btn btn-success" *ngIf="editNote" (click)="save()">Save</button>
+      <button class="btn" *ngIf="editNote" (click)="cancel()">Cancel</button>
     </p>
   </div>
 
   <ng-template #display>
-    <div class="col-sm-6">
+    <div class="col-sm-6"> <!-- SET MIN WIDTH NEW NTES ARE TRUNCATED IN DISPLAY VIEW -->
       <div *ngIf="note">
         <label class="date">Last edited: {{ note.date | date:'dd MMM yyyy \'at\' hh:mm' }}</label>
       </div>
@@ -24,8 +24,8 @@
       <div>{{editTitle}}</div>
 
       <div>{{editContent}}</div>
-      <p>
-        <button *ngIf="!editNote" (click)="edit()">Edit</button>
+      <p class="buttons">
+        <button class="btn btn-success" *ngIf="!editNote" (click)="edit()">Edit</button>
       </p>
     </div>
   </ng-template>
