@@ -21,9 +21,14 @@ export class NotesService {
     return this.getNotes().map(notes => notes.find(note => note.id === +id)!);
   }
 
-  addNote(note: Note) {}
+  addNote(note: Note) {
+    NOTES.push(note);
+    this.notes$.next(NOTES);
+  }
 
-  editNote(note: Note) {}
+  editNote(note: Note) {
+    this.notes$.next(this.notes$.getValue().concat([note]));
+  }
 
   getNextId(): number {
     return this.nextId++;

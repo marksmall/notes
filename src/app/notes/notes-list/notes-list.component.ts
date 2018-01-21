@@ -22,14 +22,19 @@ export class NotesListComponent implements OnInit {
               private router: Router,
   ) { }
 
-  addNote(note: Note) {
+  addNote() {
     this.router.navigate(['notes/add']);
+  }
+
+  select(note: Note) {
+    this.selectedId = note.id;
   }
 
   ngOnInit() {
     this.notes$ = this.route.paramMap
       .switchMap((params: ParamMap) => {
         this.selectedId = +params.get('id');
+        console.log('Selected ID: ', this.selectedId);
         return this.notesService.getNotes();
       });
   }
